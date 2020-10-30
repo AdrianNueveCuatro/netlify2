@@ -1,2 +1,14 @@
 [build]
-  functions = "my_functions"
+  functions = "functions/"
+  publish = "www"
+
+[dev]
+  publish = "www"
+  
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  
+[redirects.headers]
+  Access-Control-Allow-Origin = "*"
