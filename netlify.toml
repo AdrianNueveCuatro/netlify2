@@ -5,7 +5,8 @@
   functions = "/functions"
 
 [build.environment]
-  GO_VERSION = "1.14.5"
+  GO_IMPORT_PATH = "github.com/arce/faas"
+  GO111MODULE = "on"
 
 [[redirects]]
   from = "/api/*"
