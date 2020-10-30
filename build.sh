@@ -1,1 +1,1 @@
-GOBIN=$(pwd)/functions go install ./../api/
+GOBIN=$(pwd)/functions go install ../api/
