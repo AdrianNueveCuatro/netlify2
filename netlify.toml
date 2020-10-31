@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  command = "./build.sh"
+  command = "make netlify"
   publish = "/www"
   functions = "/functions"
 
@@ -12,6 +12,6 @@
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
   status = 200
-  
+
 [redirects.headers]
   Access-Control-Allow-Origin = "*"
