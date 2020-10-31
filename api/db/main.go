@@ -35,5 +35,7 @@ func main() {
 		log.Fatal(err)
 	}
 
+	defer client.Disconnect(ctx)
+
 	lambda.Start(handler)
 }
