@@ -12,6 +12,15 @@ type Connection struct {
 	collection *mongo.Collection
 }
 
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	return &events.APIGatewayProxyResponse{
+		StatusCode:      200,
+		Headers:         map[string]string{"Content-Type": "text/plain"},
+		Body:            "DB Hello, World!",
+		IsBase64Encoded: false,
+	}, nil
+}
+
 func main() {
 	ctx := context.Background()
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(os.Getenv("ATLAS_URI")))
@@ -20,4 +29,6 @@ func main() {
 	}
 
 	defer client.Disconnect(ctx)
+
+	lambda.Start(handler)
 }
