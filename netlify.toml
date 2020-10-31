@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  command = "build.sh"
+  command = "make build"
   publish = "/www"
   functions = "/functions"
 
