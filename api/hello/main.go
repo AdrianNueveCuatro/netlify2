@@ -37,7 +37,9 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 	var data []byte
 	if err == nil {
 		book := FindBook(id)
-		data, _ = json.Marshal(*book)
+		if book != nil {
+			data, _ = json.Marshal(*book)
+		}
 	}
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
