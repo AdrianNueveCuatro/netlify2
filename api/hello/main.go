@@ -33,10 +33,11 @@ func FindBook(id int) *Book {
 }
 
 func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	id, err := strconv.Atoi(req.QueryStringParameters["id"])
+	id := req.QueryStringParameters["id"]
+	param, err := strconv.Atoi(req.QueryStringParameters["id"])
 	var data []byte
 	if err == nil {
-		book := FindBook(id)
+		book := FindBook(param)
 		if book != nil {
 			data, _ = json.Marshal(*book)
 		}
@@ -44,7 +45,7 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
 		Headers:         map[string]string{"Content-Type": "text/html"},
-		Body:            "<" + string(id) + "|" + string(data) + ">",
+		Body:            "<" + id + "|" + string(data) + ">",
 		IsBase64Encoded: false,
 	}, nil
 }
