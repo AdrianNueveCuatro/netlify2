@@ -44,7 +44,7 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
 		Headers:         map[string]string{"Content-Type": "text/html"},
-		Body:            "<" + string(id) + ">",
+		Body:            "<" + string(id) + "|" + string(data) + ">",
 		IsBase64Encoded: false,
 	}, nil
 }
