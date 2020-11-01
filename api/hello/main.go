@@ -40,6 +40,8 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 		book := FindBook(param)
 		if book != nil {
 			data, _ = json.Marshal(*book)
+		} else {
+			data = []byte("error\n")
 		}
 	}
 	return &events.APIGatewayProxyResponse{
