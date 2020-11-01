@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"io/ioutil"
 	"strconv"
 )
 
@@ -22,6 +21,57 @@ type Book struct {
 }
 
 var books []Book
+
+var jsonData string = `[
+	{
+		"_id": 1,
+		"title": "Operating System Concepts",
+		"edition": "9th",
+		"copyright": 2012,
+		"language": "ENGLISH",
+		"pages": 976,
+		"author": "Abraham Silberschatz",
+		"author_id": 1,
+		"publisher": "John Wiley & Sons",
+		"publisher_id": 1
+	},
+	{
+		"_id": 2,
+		"title": "Database System Concepts",
+		"edition": "6th",
+		"copyright": 2010,
+		"language": "ENGLISH",
+		"pages": 1376,
+		"author": "Abraham Silberschatz",
+		"author_id": 1,
+		"publisher": "John Wiley & Sons",
+		"publisher_id": 1
+	},
+	{
+		"_id": 3,
+		"title": "Computer Networks",
+		"edition": "5th",
+		"copyright": 2010,
+		"language": "ENGLISH",
+		"pages": 960,
+		"author": "Andrew S. Tanenbaum",
+		"author_id": 2,
+		"publisher": "Pearson Education",
+		"publisher_id": 2
+	},
+	{
+		"_id": 4,
+		"title": "Modern Operating Systems",
+		"edition": "4th",
+		"copyright": 2014,
+		"language": "ENGLISH",
+		"pages": 1136,
+		"author": "Andrew S. Tanenbaum",
+		"author_id": 2,
+		"publisher": "Pearson Education",
+		"publisher_id": 2
+	}
+]`
 
 func FindBook(id int) *Book {
 	for _, book := range books {
@@ -57,7 +107,6 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 }
 
 func main() {
-	file, _ := ioutil.ReadFile("books.json")
-	_ = json.Unmarshal([]byte(file), &books)
+	_ = json.Unmarshal([]byte(jsonData), &books)
 	lambda.Start(handler)
 }
