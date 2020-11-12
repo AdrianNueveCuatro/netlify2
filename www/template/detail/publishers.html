@@ -19,7 +19,7 @@
     </div>
     <div class="six columns">
        <label for="genereInput">Genere</label>
-       <input class="u-full-width" id="genere" type="text" value="{{ genere  }}"  readonly/>
+       <input class="u-full-width" id="genere" type="text" value="{{ genere }}"  readonly/>
     </div>
   </div>
 </form>
@@ -27,6 +27,6 @@
 <h5>Books</h5>
 <ul>
 {{#books}}
-  <li><a href="/bookById/?id={{BookId}}">{{title}}</li>
+  <li><a href="/bookById/?id={{book_id}}">{{title}}</li>
 {{/books}}
 </ul>
