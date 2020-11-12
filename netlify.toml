@@ -15,7 +15,7 @@
 	
 [[redirects]]
   from = "/*"
-  to = "/www/index.html/:splat"
+  to = "/www/index.html"
   status = 200
 
 [redirects.headers]
