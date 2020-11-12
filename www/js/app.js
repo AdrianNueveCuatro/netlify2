@@ -1,34 +1,59 @@
-function getAll() {
-  fetch('/template/list.html')
-    .then((response) => response.text())
-    .then((template) => {
-      var rendered = Mustache.render(template, data);
-      document.getElementById('content').innerHTML = rendered;    
-   });
+function getAll(entity) {
+	fetch('api/' + entity)
+		.then((data) => {
+			fetch('/template/list/' + entity + '.html')
+				.then((response) => response.text())
+				.then((template) => {
+					var rendered = Mustache.render(template, data);
+					document.getElementById('content').innerHTML = rendered;
+				});
+		})
 }
 
-function checkId(item) {
-	return item._id==this
+function getById(query, entity) {
+	var params = new URLSearchParams(query);
+	fetch('api/' + entity + '/' + params.get('id'))
+		.then((data) => {
+			fetch('/template/detail/' + entity + '.html')
+				.then((response) => response.text())
+				.then((template) => {
+					var rendered = Mustache.render(template, data);
+					document.getElementById('content').innerHTML = rendered;
+				});
+		})
 }
 
-function getById(query) {
-  fetch('/template/detail.html')
-    .then((response) => response.text())
-    .then((template) => {
-	  var params = new URLSearchParams(query);
-	  var elem = data.find(checkId,params.get('id'));
-      var rendered = Mustache.render(template, elem);
-      document.getElementById('content').innerHTML = rendered;    
-   });
+function home() {
+	fetch('/template/home.html')
+		.then((response) => response.text())
+		.then((template) => {
+			var rendered = Mustache.render(template, {});
+			document.getElementById('content').innerHTML = rendered;
+		});
 }
 
 function init() {
 	router = new Navigo(null, false, '#!');
 	router.on({
-	  '/get': function(_,query) {
-		 getById(query);
-	  }
+		'/books': function() {
+			getAll('books');
+		},
+		'/authors': function() {
+			getAll('authors');
+		},
+		'/pushishers': function() {
+			getAll('publishers');
+		},
+		'/bookById': function(_, query) {
+			getById(query, 'books');
+		},
+		'/authorById': function(_, query) {
+			getById(query, 'authors');
+		},
+		'/publisherById': function(_, query) {
+			getById(query, 'publishers');
+		}
 	});
-	router.on(() => getAll());
+	router.on(() => home());
 	router.resolve();
 }
