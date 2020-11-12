@@ -1,5 +1,3 @@
-//
-
 function getAll(entity) {
 	fetch('https://faas-example.netlify.app/api/' + entity)
 	  .then((response) => response.json())
@@ -15,7 +13,7 @@ function getAll(entity) {
 
 function getById(query, entity) {
 	var params = new URLSearchParams(query);
-	fetch('https://faas-example.netlify.app/api/' + entity + '/' + params.get('id'))
+	fetch('https://faas-example.netlify.app/api/' + entity + '/?id=' + params.get('id'))
 	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/detail/' + entity + '.html')
