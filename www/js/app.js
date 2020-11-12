@@ -3,11 +3,10 @@
 function getAll(entity) {
 	fetch('https://faas-example.netlify.app/api/' + entity)
 		.then((data) => {
-			data = JSON.parse(data.text())
 			fetch('/template/list/' + entity + '.html')
 				.then((response) => response.text())
 				.then((template) => {
-					var rendered = Mustache.render(template, data);
+					var rendered = Mustache.render(template, data.json());
 					document.getElementById('content').innerHTML = rendered;
 				});
 		})
@@ -17,11 +16,10 @@ function getById(query, entity) {
 	var params = new URLSearchParams(query);
 	fetch('https://faas-example.netlify.app/api/' + entity + '/' + params.get('id'))
 		.then((data) => {
-			data = JSON.parse(data.text())
 			fetch('/template/detail/' + entity + '.html')
 				.then((response) => response.text())
 				.then((template) => {
-					var rendered = Mustache.render(template, data);
+					var rendered = Mustache.render(template, data.json());
 					document.getElementById('content').innerHTML = rendered;
 				});
 		})
