@@ -6,7 +6,7 @@ function getAll(entity) {
 			fetch('/template/list/' + entity + '.html')
 				.then((response) => response.text())
 				.then((template) => {
-					console.log(data.json())
+					alert(data.json())
 					var rendered = Mustache.render(template, data.json());
 					document.getElementById('content').innerHTML = rendered;
 				});
