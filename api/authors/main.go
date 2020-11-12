@@ -9,7 +9,7 @@ import (
 
 type BookRef struct {
 	BookId int    `json:book_id`
-	Title  string `json:"author"`
+	Title  string `json:"title"`
 }
 
 type Author struct {
