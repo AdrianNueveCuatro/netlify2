@@ -41,7 +41,7 @@ function init() {
 		'/authors': function() {
 			getAll('authors');
 		},
-		'/pushishers': function() {
+		'/publishers': function() {
 			getAll('publishers');
 		},
 		'/bookById': function(_, query) {
