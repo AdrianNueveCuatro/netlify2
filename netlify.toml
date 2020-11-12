@@ -1,7 +1,7 @@
 [build]
   base = "/"
   command = "make build"
-	publish = "www"
+	publish = "/www"
   functions = "/functions"
 
 [build.environment]
