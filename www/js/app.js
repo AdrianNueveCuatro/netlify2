@@ -1,3 +1,5 @@
+//
+
 function getAll(entity) {
 	fetch('https://faas-example.netlify.app/api/' + entity)
 		.then((data) => {
