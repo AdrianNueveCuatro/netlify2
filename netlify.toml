@@ -12,6 +12,11 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+	
+[[redirects]]
+  from = "/*"
+  to = "/www/index.html/:splat"
+  status = 200
 
 [redirects.headers]
   Access-Control-Allow-Origin = "*"
