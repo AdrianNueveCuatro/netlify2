@@ -8,7 +8,7 @@ import (
 )
 
 type BookRef struct {
-	BookId int    `json:book_id`
+	BookId int    `json:"book_id"`
 	Title  string `json:"title"`
 }
 

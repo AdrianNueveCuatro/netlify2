@@ -17,7 +17,7 @@ type Book struct {
 	Author       string `json:"author"`
 	Author_Id    int    `json:"author_id"`
 	Publisher    string `json:"publisher"`
-	Publisher_Id int    `json:publisher_id`
+	Publisher_Id int    `json:"publisher_id"`
 }
 
 var books []Book
