@@ -2,12 +2,11 @@
 
 function getAll(entity) {
 	fetch('https://faas-example.netlify.app/api/' + entity)
-	  .then(response => response.json())
+	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/list/' + entity + '.html')
 				.then((response) => response.text())
 				.then((template) => {
-					alert(data.json())
 					var rendered = Mustache.render(template, data);
 					document.getElementById('content').innerHTML = rendered;
 				});
@@ -17,7 +16,7 @@ function getAll(entity) {
 function getById(query, entity) {
 	var params = new URLSearchParams(query);
 	fetch('https://faas-example.netlify.app/api/' + entity + '/' + params.get('id'))
-	  .then(response => response.json())
+	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/detail/' + entity + '.html')
 				.then((response) => response.text())
