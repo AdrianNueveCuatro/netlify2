@@ -25,51 +25,51 @@ var songs []Song
 var jsonData string = `[
 	{
 		"_id": 1,
-		"title": "Song 1",
-		"edition": "9th",
-		"copyright": 2012,
-		"language": "ENGLISH",
+		"title": "Jennifer",
+		"edition": "1",
+		"copyright": 1999,
+		"language": "Inglés",
 		"pages": 976,
-		"author": "Abraham Silberschatz",
+		"author": "Eurythmics",
 		"author_id": 1,
-		"publisher": "John Wiley & Sons",
-		"publisher_id": 1
+		"album": "Sweet Dreams Album",
+		"album_id": 1
 	},
 	{
 		"_id": 2,
-		"title": "Song 2",
+		"title": "Sweet Dreams",
 		"edition": "6th",
-		"copyright": 2010,
-		"language": "ENGLISH",
+		"copyright": 1999,
+		"language": "Ingles",
 		"pages": 1376,
-		"author": "Abraham Silberschatz",
+		"author": "Eurythmics",
 		"author_id": 1,
-		"publisher": "John Wiley & Sons",
-		"publisher_id": 1
+		"album": "Sweet Dreams Album",
+		"album_id": 1
 	},
 	{
 		"_id": 3,
-		"title": "Song 3",
+		"title": "Blue",
 		"edition": "5th",
-		"copyright": 2010,
-		"language": "ENGLISH",
+		"copyright": 2000,
+		"language": "Ingles",
 		"pages": 960,
-		"author": "Andrew S. Tanenbaum",
+		"author": "Eiffel 65",
 		"author_id": 2,
-		"publisher": "Pearson Education",
-		"publisher_id": 2
+		"album": "Europop",
+		"album_id": 2
 	},
 	{
 		"_id": 4,
-		"title": "Song 4",
+		"title": "Dub In Life",
 		"edition": "4th",
-		"copyright": 2014,
-		"language": "ENGLISH",
+		"copyright": 2000,
+		"language": "Ingles",
 		"pages": 1136,
-		"author": "Andrew S. Tanenbaum",
+		"author": "Eiffel 65",
 		"author_id": 2,
-		"publisher": "Pearson Education",
-		"publisher_id": 2
+		"album": "Europop",
+		"album_id": 2
 	}
 ]`
 
