@@ -7,8 +7,8 @@ import (
 	"strconv"
 )
 
-type BookRef struct {
-	BookId int    `json:"book_id"`
+type Ref struct {
+	SongId int    `json:"song_id"`
 	Title  string `json:"title"`
 }
 
@@ -18,7 +18,7 @@ type Author struct {
 	Nationality string    `json:"nationality"`
 	BirthYear   int       `json:"birth_year"`
 	Fields      string    `json:"fields"`
-	Books       []BookRef `json:"books"`
+	Songs       []SongRef `json:"songs"`
 }
 
 var items []Author
@@ -30,13 +30,13 @@ var jsonData string = `[
 		"nationality": "Israelis / American",
 		"birth_year": 1952,
 		"fields": "Database Systems, Operating Systems",
-		"books": [
+		"songs": [
 			{
-				"book_id": 1,
+				"song_id": 1,
 				"title": "Operating System Concepts"
 			},
 			{
-				"book_id": 2,
+				"song_id": 2,
 				"title": "Database System Concepts"
 			}
 		]
@@ -47,13 +47,13 @@ var jsonData string = `[
 		"nationality": "Dutch / American",
 		"birth_year": 1944,
 		"fields": "Distributed computing, Operating Systems",
-		"books": [
+		"songs": [
 			{
-				"book_id": 3,
+				"song_id": 3,
 				"title": "Computer Networks"
 			},
 			{
-				"book_id": 4,
+				"song_id": 4,
 				"title": "Modern Operating Systems"
 			}
 		]
