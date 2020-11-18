@@ -28,8 +28,8 @@ var jsonData string = `[
 		"_id": 1,
 		"album": "Sweet Dreams Album",
 		"country": "Inglaterra",
-		"founded": 1807,
-		"genere": "Rock",
+		"release": 1983,
+		"genre": "Rock",
 		"songs": [
 			{
 				"song_id": 1,
@@ -45,8 +45,8 @@ var jsonData string = `[
 		"_id": 2,
 		"album": "Europop",
 		"country": "Italia",
-		"founded": 1844,
-		"genere": "Pop",
+		"release": 1999,
+		"genre": "Pop",
 		"songs": [
 			{
 				"song_id": 3,
@@ -55,6 +55,40 @@ var jsonData string = `[
 			{
 				"song_id": 4,
 				"title": "Dub In Life"
+			}
+		]
+	},
+	{
+		"_id": 3,
+		"album": "Free the Universe",
+		"country": "Jamaica",
+		"release": 2013,
+		"genre": "Dancehall",
+		"songs": [
+			{
+				"song_id": 5,
+				"title": "Scare me"
+			},
+			{
+				"song_id": 6,
+				"title": "Get free"
+			}
+		]
+	},
+	{
+		"_id": 4,
+		"album": "Pal Mundo",
+		"country": "Puerto Rico",
+		"release": 2005,
+		"genre": "Reggaeton",
+		"songs": [
+			{
+				"song_id": 7,
+				"title": "Rakata"
+			},
+			{
+				"song_id": 8,
+				"title": "Sin el"
 			}
 		]
 	}
