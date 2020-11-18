@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Información de albums</h3>
+En esta sección se presenta información de albums
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/albumById/?id={{ _id }}'> {{ album }}</a></li>
+  {{/.}}
+</ul>
