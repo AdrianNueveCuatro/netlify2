@@ -26,35 +26,35 @@ var items []Album
 var jsonData string = `[
 	{
 		"_id": 1,
-		"album": "album 1",
-		"country": "United States",
+		"album": "Sweet Dreams Album",
+		"country": "Inglaterra",
 		"founded": 1807,
-		"genere": "Academic",
+		"genere": "Rock",
 		"songs": [
 			{
 				"song_id": 1,
-				"title": "Operating System Concepts"
+				"title": "Jennifer"
 			},
 			{
 				"song_id": 2,
-				"title": "Database System Concepts"
+				"title": "Sweet Dreams"
 			}
 		]
 	},
 	{
 		"_id": 2,
-		"album": "album 2",
-		"country": "United Kingdom",
+		"album": "Europop",
+		"country": "Italia",
 		"founded": 1844,
-		"genere": "Education",
+		"genere": "Pop",
 		"songs": [
 			{
 				"song_id": 3,
-				"title": "Computer Networks"
+				"title": "Blue"
 			},
 			{
 				"song_id": 4,
-				"title": "Modern Operating Systems"
+				"title": "Dub In Life"
 			}
 		]
 	}
