@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-type Ref struct {
+type SongRef struct {
 	SongId int    `json:"song_id"`
 	Title  string `json:"title"`
 }
