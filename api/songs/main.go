@@ -10,14 +10,14 @@ import (
 type Song struct {
 	Id           int    `json:"_id"`
 	Title        string `json:"title"`
-	Edition      string `json:"edition"`
+	Format      string `json:"format"`
 	Copyright    int    `json:"copyright"`
 	Language     string `json:"language"`
 	Pages        int    `json:"pages"`
 	Author       string `json:"author"`
 	Author_Id    int    `json:"author_id"`
-	Publisher    string `json:"publisher"`
-	Publisher_Id int    `json:"publisher_id"`
+	Album        string `json:"album"`
+	Album_Id     int    `json:"album_id"`
 }
 
 var songs []Song
