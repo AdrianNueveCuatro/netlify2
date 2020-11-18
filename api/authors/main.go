@@ -28,7 +28,7 @@ var jsonData string = `[
 		"_id": 1,
 		"author": "Eurythmics",
 		"nationality": "Inglaterra",
-		"birth_year": 1952,
+		"debut": 1980,
 		"fields": "Jennifer, Sweet Dreams",
 		"songs": [
 			{
@@ -45,7 +45,7 @@ var jsonData string = `[
 		"_id": 2,
 		"author": "Eiffel 65",
 		"nationality": "Italia",
-		"birth_year": 1944,
+		"debut": 1998,
 		"fields": "Blue, Dub In Life",
 		"songs": [
 			{
@@ -55,6 +55,40 @@ var jsonData string = `[
 			{
 				"song_id": 4,
 				"title": "Dub In Life"
+			}
+		]
+	},
+	{
+		"_id": 3,
+		"author": "Major Lazer",
+		"nationality": "Jamaica",
+		"debut": 2008,
+		"fields": "Scare me, Get free",
+		"songs": [
+			{
+				"song_id": 5,
+				"title": "Scare me"
+			},
+			{
+				"song_id": 6,
+				"title": "Get free"
+			}
+		]
+	},
+	{
+		"_id": 4,
+		"author": "Wisin & Yandel",
+		"nationality": "Puerto Rico",
+		"debut": 1998,
+		"fields": "Rakata, Sin el",
+		"songs": [
+			{
+				"song_id": 7,
+				"title": "Rakata"
+			},
+			{
+				"song_id": 8,
+				"title": "Sin el"
 			}
 		]
 	}
