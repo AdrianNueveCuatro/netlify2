@@ -1,4 +1,4 @@
-module github.com/arce/faas
+module github.com/AdrianNueveCuatro/netlify2
 
 go 1.13
 
