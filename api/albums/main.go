@@ -16,8 +16,8 @@ type Album struct {
 	Id        int       `json:"_id"`
 	Album     string    `json:"album"`
 	Country   string    `json:"country"`
-	Founded   int       `json:"founded"`
-	Genere    string    `json:"genere"`
+	Release   int       `json:"release"`
+	Genre    string    `json:"genre"`
 	Songs     []SongRef `json:"songs"`
 }
 
