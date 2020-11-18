@@ -1,5 +1,5 @@
 <h4 style="margin-top: 15px">{{ author }}</h4>
-<h5>Author's details</h5>
+<h5>Información de cantantes</h5>
 
 <form>
   <div class="row">
@@ -24,9 +24,9 @@
   </div>
 </form>
 
-<h5>Books</h5>
+<h5>Canciones</h5>
 <ul>
-{{#books}}
-  <li><a href="/bookById/?id={{book_id}}">{{title}}</li>
-{{/books}}
+{{#songs}}
+  <li><a href="/songById/?id={{song_id}}">{{title}}</li>
+{{/songs}}
 </ul>
