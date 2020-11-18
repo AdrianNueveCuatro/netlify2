@@ -16,7 +16,7 @@ type Author struct {
 	Id          int       `json:"_id"`
 	Author      string    `json:"author"`
 	Nationality string    `json:"nationality"`
-	BirthYear   int       `json:"birth_year"`
+	Debut       int       `json:"debut"`
 	Fields      string    `json:"fields"`
 	Songs       []SongRef `json:"songs"`
 }
