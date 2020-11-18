@@ -26,35 +26,35 @@ var items []Author
 var jsonData string = `[
 	{
 		"_id": 1,
-		"author": "Abraham Silberschatz",
-		"nationality": "Israelis / American",
+		"author": "Eurythmics",
+		"nationality": "Inglaterra",
 		"birth_year": 1952,
-		"fields": "Database Systems, Operating Systems",
+		"fields": "Jennifer, Sweet Dreams",
 		"songs": [
 			{
 				"song_id": 1,
-				"title": "Operating System Concepts"
+				"title": "Jennifer"
 			},
 			{
 				"song_id": 2,
-				"title": "Database System Concepts"
+				"title": "Sweet Dreams"
 			}
 		]
 	},
 	{
 		"_id": 2,
-		"author": "Andrew S. Tanenbaum",
-		"nationality": "Dutch / American",
+		"author": "Eiffel 65",
+		"nationality": "Italia",
 		"birth_year": 1944,
-		"fields": "Distributed computing, Operating Systems",
+		"fields": "Blue, Dub In Life",
 		"songs": [
 			{
 				"song_id": 3,
-				"title": "Computer Networks"
+				"title": "Blue"
 			},
 			{
 				"song_id": 4,
-				"title": "Modern Operating Systems"
+				"title": "Dub In Life"
 			}
 		]
 	}
