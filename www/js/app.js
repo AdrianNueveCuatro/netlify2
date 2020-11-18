@@ -1,5 +1,5 @@
 function getAll(entity) {
-	fetch('https://faas-example.netlify.app/api/' + entity)
+	fetch('https://sitio-de-musica-2.netlify.app/api/' + entity)
 	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/list/' + entity + '.html')
@@ -13,7 +13,7 @@ function getAll(entity) {
 
 function getById(query, entity) {
 	var params = new URLSearchParams(query);
-	fetch('https://faas-example.netlify.app/api/' + entity + '/?id=' + params.get('id'))
+	fetch('https://sitio-de-musica-2.netlify.app/api/' + entity + '/?id=' + params.get('id'))
 	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/detail/' + entity + '.html')
@@ -37,8 +37,8 @@ function home() {
 function init() {
 	router = new Navigo(null, false, '#!');
 	router.on({
-		'/books': function() {
-			getAll('books');
+		'/songs': function() {
+			getAll('songs');
 		},
 		'/authors': function() {
 			getAll('authors');
@@ -46,8 +46,8 @@ function init() {
 		'/publishers': function() {
 			getAll('publishers');
 		},
-		'/bookById': function(_, query) {
-			getById(query, 'books');
+		'/songById': function(_, query) {
+			getById(query, 'songs');
 		},
 		'/authorById': function(_, query) {
 			getById(query, 'authors');
