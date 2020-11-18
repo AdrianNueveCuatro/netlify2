@@ -43,8 +43,8 @@ function init() {
 		'/authors': function() {
 			getAll('authors');
 		},
-		'/publishers': function() {
-			getAll('publishers');
+		'/albums': function() {
+			getAll('albums');
 		},
 		'/songById': function(_, query) {
 			getById(query, 'songs');
@@ -52,8 +52,8 @@ function init() {
 		'/authorById': function(_, query) {
 			getById(query, 'authors');
 		},
-		'/publisherById': function(_, query) {
-			getById(query, 'publishers');
+		'/albumById': function(_, query) {
+			getById(query, 'albums');
 		}
 	});
 	router.on(() => home());
